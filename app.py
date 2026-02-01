@@ -1,7 +1,6 @@
 import streamlit as st
 import pickle
 import pandas as pd
-import matplotlib.pyplot as plt
 
 # ---------------- Page Configuration ----------------
 st.set_page_config(
@@ -72,14 +71,10 @@ if st.button("🔮 Predict Sales"):
     # ---------------- Plot ----------------
     st.subheader("📈 Forecasted Sales")
 
-    fig, ax = plt.subplots(figsize=(8, 4))
-    ax.plot(forecast_future['ds'], forecast_future['yhat'], marker='o')
-    ax.set_xlabel("Date")
-    ax.set_ylabel("Forecasted Sales")
-    ax.set_title(f"Sales Forecast for Next {days} Days")
-    ax.grid(True)
+    st.subheader("📈 Forecasted Sales")
 
-    st.pyplot(fig)
+    chart_data = forecast_future.set_index("ds")[["yhat"]]
+    st.line_chart(chart_data)
 
     # ---------------- Table ----------------
     st.subheader("📊 Forecasted Values")

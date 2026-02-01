@@ -1,0 +1,8 @@
+streamlit
+pandas
+numpy
+scikit-learn
+prophet
+cmdstanpy
+pickle-mixin
+openpyxl
