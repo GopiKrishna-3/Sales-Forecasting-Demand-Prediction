@@ -34,14 +34,8 @@ https://sales-forecasting-demand-prediction-zaasd4siua2amt5zzhu2h5.streamlit.app
 5. Dashboard Visualization  
 
 ---
-
-## ▶️ How to Run
-```bash
-pip install -r requirements.txt
-streamlit run app.py
-
----
-
 ## 👨‍💻 Author
-**Krishna Gude**
+**Gude Gopi Krishna**
+
+
 
